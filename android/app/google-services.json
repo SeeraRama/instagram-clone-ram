@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "963788186155",
+    "project_id": "instagram-clone-amyra",
+    "storage_bucket": "instagram-clone-amyra.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963788186155:android:e5a88ebea1ef3b0bb2806e",
+        "android_client_info": {
+          "package_name": "com.ram.learning.instagram_clone_ram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963788186155-65vfm484h15mtthcnvq1pnp72el40pa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTpakgDSdDECcqqvzi0hFbpwjSdDP6PCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963788186155-65vfm484h15mtthcnvq1pnp72el40pa1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
