@@ -7,6 +7,10 @@ import 'package:instagram_clone_ram/state/auth/providers/auth_state_provider.dar
 import 'package:instagram_clone_ram/state/auth/providers/is_loading_provider.dart';
 import 'package:instagram_clone_ram/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone_ram/views/components/loading/loading_screen.dart';
+import 'package:instagram_clone_ram/views/login/divider_with_margins.dart';
+import 'package:instagram_clone_ram/views/login/google_button.dart';
+import 'package:instagram_clone_ram/views/login/login_view.dart';
+import 'package:instagram_clone_ram/views/login/login_view_signup_links.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -53,9 +57,9 @@ class MyApp extends ConsumerWidget {
               }
             });
             if (isLoggedIn) {
-              return const LoginView();
-            } else {
               return const Home();
+            } else {
+              return const LoginView();
             }
             // isLoggedIn ? const LoginView() : const Home();
           },
@@ -63,14 +67,14 @@ class MyApp extends ConsumerWidget {
   }
 }
 
-class LoginView extends ConsumerStatefulWidget {
-  const LoginView({super.key});
+class Home extends ConsumerStatefulWidget {
+  const Home({super.key});
 
   @override
-  ConsumerState<LoginView> createState() => _LoginViewState();
+  ConsumerState<Home> createState() => _HomeState();
 }
 
-class _LoginViewState extends ConsumerState<LoginView> {
+class _HomeState extends ConsumerState<Home> {
   @override
   Widget build(BuildContext context) {
     final autprovider = ref.read(authStateProvider.notifier);
@@ -85,7 +89,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
     );
   }
 }
-
+/*
 class Home extends ConsumerStatefulWidget {
   const Home({super.key});
 
@@ -101,14 +105,21 @@ class _HomeState extends ConsumerState<Home> {
         title: const Text('Home Page'),
       ),
       body: Center(
-        child: Column(children: [
-          TextButton(
+        child: Column(
+          children: [
+            TextButton(
               onPressed: () async {
                 await ref.read(authStateProvider.notifier).loginWithGoogle();
               },
-              child: const Text('login with Google'))
-        ]),
+              child: const Text('login with Google'),
+            ),
+            const DividerWithMargins(),
+            const GoogleButton(),
+            const LoginViewSignupLinks(),
+          ],
+        ),
       ),
     );
   }
 }
+*/
